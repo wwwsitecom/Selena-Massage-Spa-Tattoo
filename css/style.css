@@ -1,0 +1,1624 @@
+
+/* =========================================
+   SELENA MASSAGE SPA WITH TATTOO
+   MAIN STYLESHEET
+   PART 1
+========================================= */
+
+
+/* =========================================
+   1. GOOGLE FONT FALLBACK
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* =========================================
+   2. ROOT VARIABLES
+========================================= */
+
+:root {
+
+    /* Main Colors */
+
+    --primary-color: #b58b50;
+
+    --primary-dark: #94703d;
+
+    --primary-light: #d6b77e;
+
+    --gold-light: #e8d4aa;
+
+
+    /* Background Colors */
+
+    --cream-color: #f8f4eb;
+
+    --cream-light: #fdfbf7;
+
+    --white-color: #ffffff;
+
+    --beige-color: #eee5d5;
+
+
+    /* Text Colors */
+
+    --dark-color: #30291f;
+
+    --heading-color: #33291e;
+
+    --text-color: #777064;
+
+    --light-text: #aaa092;
+
+
+    /* Border Colors */
+
+    --border-color: #e9dfce;
+
+
+    /* Typography */
+
+    --heading-font: 'Playfair Display', serif;
+
+    --body-font: 'DM Sans', sans-serif;
+
+
+    /* Shadows */
+
+    --shadow-sm: 0 4px 15px rgba(70, 50, 25, 0.06);
+
+    --shadow-md: 0 10px 30px rgba(70, 50, 25, 0.10);
+
+    --shadow-lg: 0 15px 45px rgba(70, 50, 25, 0.15);
+
+
+    /* Border Radius */
+
+    --radius-sm: 6px;
+
+    --radius-md: 12px;
+
+    --radius-lg: 20px;
+
+    --radius-full: 50px;
+
+
+    /* Transitions */
+
+    --transition: all 0.35s ease;
+
+
+    /* Layout */
+
+    --container-width: 1200px;
+
+}
+
+
+/* =========================================
+   3. GLOBAL RESET
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 100px;
+
+}
+
+
+body {
+
+    font-family: var(--body-font);
+
+    background: var(--cream-light);
+
+    color: var(--text-color);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+
+body,
+button,
+input,
+textarea,
+select {
+
+    font-family: var(--body-font);
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: var(--transition);
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+}
+
+
+.section-padding {
+
+    padding: 100px 0;
+
+}
+
+
+/* =========================================
+   4. GLOBAL TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: var(--heading-font);
+
+    color: var(--heading-color);
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+}
+
+
+p {
+
+    color: var(--text-color);
+
+}
+
+
+.section-subtitle {
+
+    display: inline-block;
+
+    color: var(--primary-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-title {
+
+    font-family: var(--heading-font);
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    color: var(--heading-color);
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-title span {
+
+    color: var(--primary-color);
+
+    font-style: italic;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.section-heading p {
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    max-width: 580px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   5. PRIMARY BUTTON
+========================================= */
+
+.primary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 15px 30px;
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    border-radius: var(--radius-full);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+.primary-btn:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+
+.primary-btn i {
+
+    font-size: 12px;
+
+    transition: var(--transition);
+
+}
+
+
+.primary-btn:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   6. SECONDARY BUTTON
+========================================= */
+
+.secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 28px;
+
+    color: var(--white-color);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: var(--radius-full);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+
+.secondary-btn:hover {
+
+    background: var(--white-color);
+
+    color: var(--primary-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   7. OUTLINE BUTTON
+========================================= */
+
+.outline-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 14px 30px;
+
+    border: 1px solid var(--primary-color);
+
+    color: var(--primary-dark);
+
+    border-radius: var(--radius-full);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.outline-btn:hover {
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   8. TOP ANNOUNCEMENT BAR
+========================================= */
+
+.top-bar {
+
+    width: 100%;
+
+    background: var(--dark-color);
+
+    color: var(--white-color);
+
+    padding: 10px 0;
+
+    font-size: 11px;
+
+}
+
+
+.top-bar-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.top-bar p {
+
+    color: var(--white-color);
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.top-bar p i {
+
+    color: var(--primary-light);
+
+    margin-right: 7px;
+
+}
+
+
+.top-bar-contact {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.top-bar-contact span {
+
+    color: #e4d9c8;
+
+}
+
+
+.top-bar-contact span i {
+
+    color: var(--primary-light);
+
+    margin-right: 5px;
+
+}
+
+
+.top-bar-contact a {
+
+    color: var(--primary-light);
+
+    font-weight: 700;
+
+}
+
+
+.top-bar-contact a:hover {
+
+    color: var(--white-color);
+
+}
+
+
+/* =========================================
+   9. MAIN HEADER
+========================================= */
+
+.header {
+
+    width: 100%;
+
+    background: rgba(253, 251, 247, 0.97);
+
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid var(--border-color);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+}
+
+
+.nav-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 85px;
+
+}
+
+
+/* =========================================
+   10. LOGO
+========================================= */
+
+.logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo-icon {
+
+    width: 47px;
+
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--primary-color);
+
+    border-radius: 50%;
+
+    color: var(--primary-color);
+
+    font-size: 21px;
+
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.2;
+
+}
+
+
+.logo-text strong {
+
+    font-family: var(--heading-font);
+
+    color: var(--heading-color);
+
+    font-size: 23px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.logo-text small {
+
+    color: var(--primary-dark);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================================
+   11. NAVIGATION
+========================================= */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 26px;
+
+}
+
+
+.nav-links li a {
+
+    color: var(--dark-color);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    position: relative;
+
+    padding: 10px 0;
+
+}
+
+
+.nav-links li a::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 2px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--primary-color);
+
+    transition: var(--transition);
+
+}
+
+
+.nav-links li a:hover,
+
+.nav-links li a.active {
+
+    color: var(--primary-color);
+
+}
+
+
+.nav-links li a:hover::after,
+
+.nav-links li a.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   12. NAVIGATION BOOKING BUTTON
+========================================= */
+
+.nav-book-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 21px;
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    border-radius: var(--radius-full);
+
+    white-space: nowrap;
+
+    transition: var(--transition);
+
+}
+
+
+.nav-book-btn:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+.nav-book-btn i {
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================
+   13. MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 43px;
+
+    height: 43px;
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    transition: var(--transition);
+
+}
+
+
+.menu-toggle:hover {
+
+    background: var(--primary-dark);
+
+}
+
+
+/* =========================================
+   14. HERO SECTION
+========================================= */
+
+.hero {
+
+    width: 100%;
+
+    min-height: 680px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background-image: url('../images/hero/hero-spa.jpg');
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+
+/* Hero Overlay */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(28, 23, 17, 0.83) 0%,
+        rgba(35, 28, 20, 0.65) 45%,
+        rgba(35, 28, 20, 0.15) 100%
+    );
+
+}
+
+
+/* Hero Container */
+
+.hero-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 70px;
+
+    padding-bottom: 70px;
+
+}
+
+
+/* Hero Content */
+
+.hero-content {
+
+    max-width: 680px;
+
+    animation: heroFadeUp 1s ease forwards;
+
+}
+
+
+.hero-subtitle {
+
+    color: var(--gold-light);
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-subtitle i {
+
+    margin-right: 6px;
+
+    font-size: 11px;
+
+}
+
+
+/* Hero Heading */
+
+.hero-content h1 {
+
+    font-family: var(--heading-font);
+
+    color: var(--white-color);
+
+    font-size: clamp(42px, 5.5vw, 68px);
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    max-width: 650px;
+
+}
+
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-style: italic;
+
+}
+
+
+/* Hero Paragraph */
+
+.hero-content > p {
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    max-width: 530px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 50px;
+
+}
+
+
+/* Hero Features */
+
+.hero-features {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+}
+
+
+.hero-features div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--white-color);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.hero-features div i {
+
+    color: var(--gold-light);
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================
+   15. HERO ANIMATION
+========================================= */
+
+@keyframes heroFadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   END OF PART 1
+========================================= */
+
+
+
+/* =========================================
+   SELENA MASSAGE SPA WITH TATTOO
+   CSS PART 2 — HOMEPAGE SECTIONS
+========================================= */
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    background: var(--cream-light);
+}
+
+.welcome-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
+}
+
+.welcome-text {
+    padding: 20px 0;
+}
+
+.welcome-text p {
+    color: var(--text-color);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.welcome-text .primary-btn {
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   MASSAGE SERVICES SECTION
+========================================= */
+
+.massage-section {
+    background: var(--white-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--cream-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.service-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.08);
+}
+
+.service-info {
+    padding: 25px 20px;
+}
+
+.service-info h3 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-info p {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.service-link {
+    color: var(--primary-color);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.service-link:hover {
+    color: var(--primary-dark);
+    gap: 13px;
+}
+
+
+/* =========================================
+   TATTOO SECTION
+========================================= */
+
+.tattoo-section {
+    background: var(--cream-color);
+}
+
+.tattoo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.tattoo-image {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
+}
+
+.tattoo-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.tattoo-image:hover img {
+    transform: scale(1.04);
+}
+
+.tattoo-text p {
+    color: var(--text-color);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.tattoo-features {
+    margin: 25px 0;
+}
+
+.tattoo-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.tattoo-features i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TATTOO GALLERY
+========================================= */
+
+.tattoo-gallery {
+    background: var(--white-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(48, 41, 31, 0.15);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-section {
+    background: var(--cream-color);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    background: var(--white-color);
+    padding: 35px 25px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.why-icon {
+    width: 75px;
+    height: 75px;
+    background: var(--cream-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 20px;
+}
+
+.why-card h3 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BOOKING CALL TO ACTION
+========================================= */
+
+.booking-cta {
+    background:
+        linear-gradient(
+            rgba(48, 41, 31, 0.85),
+            rgba(48, 41, 31, 0.85)
+        ),
+        url("../images/hero/booking-bg.jpg") center/cover no-repeat;
+
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.booking-cta h2 {
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    font-size: clamp(30px, 4vw, 48px);
+    margin-bottom: 20px;
+}
+
+.booking-cta p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    color: #eee5d5;
+}
+
+.booking-cta .primary-btn {
+    display: inline-block;
+}
+
+
+/* =========================================
+   PAYMENT INFORMATION SECTION
+========================================= */
+
+.payment-section {
+    background: var(--white-color);
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.payment-card {
+    padding: 30px 25px;
+    background: var(--cream-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.payment-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-light);
+}
+
+.payment-card i {
+    font-size: 38px;
+    color: var(--primary-color);
+    margin-bottom: 18px;
+}
+
+.payment-card h3 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    margin-bottom: 12px;
+}
+
+.payment-card p {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    background: var(--cream-color);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: var(--white-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.contact-item h3 {
+    color: var(--heading-color);
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.contact-item p {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.contact-form {
+    background: var(--white-color);
+    padding: 35px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-light);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    outline: none;
+    font-family: var(--body-font);
+    margin-bottom: 18px;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #29231c;
+    color: #ddd3c4;
+    padding: 75px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-logo {
+    color: var(--primary-light);
+    font-family: var(--heading-font);
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: #bcb2a4;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.footer-column h3 {
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+    color: #bcb2a4;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-light);
+    padding-left: 5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 22px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aaa092;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   NEWSLETTER / BOOKING CTA
+========================================= */
+
+.newsletter-section {
+    background: var(--cream-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.newsletter-section p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
