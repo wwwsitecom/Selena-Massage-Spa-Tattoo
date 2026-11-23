@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book an Appointment | Selena Massage Spa</title>
+
+    <meta name="description"
+        content="Book your massage or tattoo appointment at Selena Massage Spa.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/booking.css">
+
+    <script src="js/app.js" defer></script>
+    <script src="js/booking.js" defer></script>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+
+            <p>
+                <i class="fas fa-spa"></i>
+                Welcome to Selena Massage Spa
+            </p>
+
+            <div class="top-bar-contact">
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    Contact us for appointments
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+
+                <div class="logo-text">
+                    <strong>SELENA</strong>
+                    <small>MASSAGE SPA & TATTOO</small>
+                </div>
+
+            </a>
+
+
+            <nav class="navbar" id="navbar">
+
+                <ul class="nav-links">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="massage.html">Massage</a></li>
+
+                    <li><a href="tattoo.html">Tattoo</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+                <a href="booking.html" class="nav-book-btn active">
+                    Book Now
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </nav>
+
+
+            <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navbar">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- BOOKING HERO -->
+    <section class="booking-hero">
+
+        <div class="container">
+
+            <span class="section-subtitle">
+                YOUR RELAXATION STARTS HERE
+            </span>
+
+            <h1>Book Your <span>Appointment</span></h1>
+
+            <p>
+                Choose your preferred service, select a convenient
+                appointment time and send us your booking request.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-page-section">
+
+        <div class="container booking-layout">
+
+
+            <!-- BOOKING INFORMATION -->
+            <div class="booking-information">
+
+                <span class="section-subtitle">
+                    SELENA EXPERIENCE
+                </span>
+
+                <h2>Make Time for Yourself</h2>
+
+                <p>
+                    Whether you need a relaxing massage or a beautiful
+                    tattoo, our team is ready to assist you.
+                </p>
+
+
+                <div class="booking-benefit">
+
+                    <div class="booking-benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Easy Appointment Requests</h3>
+                        <p>
+                            Send your preferred date and time directly
+                            to our booking team.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <div class="booking-benefit-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+
+                    <div>
+                        <h3>Massage & Wellness</h3>
+                        <p>
+                            Choose a treatment that helps you relax
+                            and feel refreshed.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <div class="booking-benefit-icon">
+                        <i class="fas fa-paintbrush"></i>
+                    </div>
+
+                    <div>
+                        <h3>Professional Tattoo Services</h3>
+                        <p>
+                            Tell us about your preferred tattoo design
+                            and appointment.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-note">
+
+                    <i class="fas fa-info-circle"></i>
+
+                    <p>
+                        Your appointment is not confirmed until our
+                        team reviews your request and contacts you.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOKING FORM -->
+            <div class="booking-form-container">
+
+                <div class="booking-form-heading">
+
+                    <span class="section-subtitle">
+                        ONLINE BOOKING
+                    </span>
+
+                    <h2>Appointment Details</h2>
+
+                    <p>
+                        Please complete all required fields.
+                    </p>
+
+                </div>
+
+
+                <form id="booking-form">
+
+                    <!-- SPAM PROTECTION -->
+                    <input type="text"
+                        name="_gotcha"
+                        tabindex="-1"
+                        autocomplete="off"
+                        class="form-honeypot"
+                        aria-hidden="true">
+
+                    <input type="hidden"
+                        name="_subject"
+                        value="New Selena Massage Spa Booking Request">
+
+
+                    <!-- CUSTOMER INFORMATION -->
+                    <div class="form-section-title">
+                        <i class="fas fa-user"></i>
+                        Customer Information
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="customer-name">
+                                Full Name *
+                            </label>
+
+                            <input type="text"
+                                id="customer-name"
+                                name="customer_name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customer-email">
+                                Email Address *
+                            </label>
+
+                            <input type="email"
+                                id="customer-email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="customer-phone">
+                                Phone Number *
+                            </label>
+
+                            <input type="tel"
+                                id="customer-phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customer-country">
+                                Country
+                            </label>
+
+                            <input type="text"
+                                id="customer-country"
+                                name="country"
+                                placeholder="Your country">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SERVICE INFORMATION -->
+                    <div class="form-section-title">
+                        <i class="fas fa-spa"></i>
+                        Service Information
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service-category">
+                            Select Service Category *
+                        </label>
+
+                        <select id="service-category"
+                            name="service_category"
+                            required>
+
+                            <option value="">Choose a category</option>
+
+                            <option value="Massage">
+                                Massage Services
+                            </option>
+
+                            <option value="Tattoo">
+                                Tattoo Services
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service-type">
+                            Select Your Service *
+                        </label>
+
+                        <select id="service-type"
+                            name="service_type"
+                            required
+                            disabled>
+
+                            <option value="">
+                                Select a category first
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="special-request">
+                            Special Requests or Design Details
+                        </label>
+
+                        <textarea id="special-request"
+                            name="special_requests"
+                            rows="4"
+                            placeholder="Tell us about your preferences or tattoo design..."></textarea>
+
+                    </div>
+
+
+                    <!-- APPOINTMENT INFORMATION -->
+                    <div class="form-section-title">
+                        <i class="fas fa-calendar-alt"></i>
+                        Appointment Information
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="appointment-date">
+                                Preferred Date *
+                            </label>
+
+                            <input type="date"
+                                id="appointment-date"
+                                name="appointment_date"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="appointment-time">
+                                Preferred Time *
+                            </label>
+
+                            <select id="appointment-time"
+                                name="appointment_time"
+                                required>
+
+                                <option value="">Choose a time</option>
+
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="01:00 PM">01:00 PM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PAYMENT INFORMATION -->
+                    <div class="form-section-title">
+                        <i class="fas fa-credit-card"></i>
+                        Payment Information
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="payment-method">
+                            Preferred Payment Method *
+                        </label>
+
+                        <select id="payment-method"
+                            name="payment_method"
+                            required>
+
+                            <option value="">
+                                Select payment method
+                            </option>
+
+                            <option value="Bitcoin">
+                                Bitcoin (BTC)
+                            </option>
+
+                            <option value="USDT">
+                                USDT
+                            </option>
+
+                            <option value="Card Payment">
+                                Card Payment
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="payment-instructions" id="payment-instructions">
+
+                        <i class="fas fa-lock"></i>
+
+                        <p>
+                            Select a payment method to see the next steps.
+                            Never send payment until you receive verified
+                            payment instructions from Selena.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transaction-reference">
+                            Transaction Reference (Optional)
+                        </label>
+
+                        <input type="text"
+                            id="transaction-reference"
+                            name="transaction_reference"
+                            placeholder="Enter your transaction ID if already paid">
+
+                        <small>
+                            A transaction reference does not mean payment
+                            has been verified.
+                        </small>
+
+                    </div>
+
+
+                    <input type="hidden"
+                        name="payment_status"
+                        value="Pending verification">
+
+                    <input type="hidden"
+                        name="booking_status"
+                        value="Awaiting review">
+
+
+                    <!-- TERMS -->
+                    <div class="booking-checkbox">
+
+                        <input type="checkbox"
+                            id="booking-agreement"
+                            name="booking_agreement"
+                            value="Agreed"
+                            required>
+
+                        <label for="booking-agreement">
+                            I understand that this is an appointment
+                            request and that my booking is not confirmed
+                            until Selena contacts me.
+                        </label>
+
+                    </div>
+
+
+                    <!-- STATUS MESSAGE -->
+                    <div id="booking-message"
+                        class="booking-message"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button type="submit"
+                        class="booking-submit-btn"
+                        id="booking-submit">
+
+                        <span>Submit Booking Request</span>
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <p class="form-security-note">
+                        <i class="fas fa-shield-alt"></i>
+                        Your information is submitted securely through
+                        Formspree.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <div class="footer-logo">
+                    SELENA
+                </div>
+
+                <p>
+                    Experience relaxation, beauty and professional
+                    tattoo services at Selena Massage Spa.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="massage.html">Massage</a></li>
+                    <li><a href="tattoo.html">Tattoo</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Our Services</h3>
+
+                <ul>
+                    <li><a href="massage.html">Massage Therapy</a></li>
+                    <li><a href="tattoo.html">Tattoo Services</a></li>
+                    <li><a href="gallery.html">Our Gallery</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <ul>
+                    <li>
+                        <a href="mailto:Selenashepard92@gmail.com">
+                            Email Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Book Online
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; <span id="copyright-year"></span>
+                    Selena Massage Spa. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
