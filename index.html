@@ -2,61 +2,37 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Welcome to Selena Massage Spa with Tattoo. Experience luxury massage treatments, professional tattoo artistry and personalized spa services.">
-
-    <meta name="keywords"
-        content="Selena Massage Spa, Massage Therapy, Tattoo Studio, Luxury Spa, Body Massage, Tattoo Art">
-
+    <meta name="description" content="Welcome to Selena Massage Spa with Tattoo. Experience luxury massage treatments, professional tattoo artistry and personalized spa services.">
+    <meta name="keywords" content="Selena Massage Spa, Massage Therapy, Tattoo Studio, Luxury Spa, Body Massage, Tattoo Art">
     <meta name="author" content="Selena Massage Spa">
-
-    <meta name="theme-color" content="#f8f3e9">
+    <meta name="theme-color" content="#f8f4eb">
 
     <title>Selena Massage Spa with Tattoo | Luxury Spa & Tattoo Studio</title>
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Font Awesome Icons -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Main CSS -->
-
+    <!-- Website CSS -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Responsive CSS -->
-
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- Website JavaScript -->
-
+    <!-- Website JavaScript: load once -->
     <script src="js/app.js" defer></script>
-
 </head>
 
 <body>
 
-    <!-- ================================
-         TOP ANNOUNCEMENT BAR
-    ================================= -->
-
+    <!-- TOP BAR -->
     <div class="top-bar">
-
         <div class="container top-bar-content">
 
             <p>
@@ -65,756 +41,500 @@
             </p>
 
             <div class="top-bar-contact">
-
                 <span>
                     <i class="fa-solid fa-clock"></i>
                     By Appointment
                 </span>
 
-                <a href="contact.html">
-                    Contact Us
-                </a>
-
+                <a href="contact.html">Contact Us</a>
             </div>
 
         </div>
-
     </div>
 
 
-    <!-- ================================
-         HEADER / NAVIGATION
-    ================================= -->
-
+    <!-- HEADER AND NAVIGATION -->
     <header class="header" id="header">
 
         <div class="container nav-container">
 
-            <!-- Logo -->
-
             <a href="index.html" class="logo">
-
                 <span class="logo-icon">
                     <i class="fa-solid fa-spa"></i>
                 </span>
 
                 <span class="logo-text">
-
                     <strong>SELENA</strong>
-
                     <small>MASSAGE SPA & TATTOO</small>
-
                 </span>
-
             </a>
-
-
-            <!-- Navigation -->
 
             <nav class="navbar" id="navbar">
 
                 <ul class="nav-links">
-
-                    <li>
-                        <a href="index.html" class="active">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-
-                    <li>
-                        <a href="massage.html">Massage</a>
-                    </li>
-
-                    <li>
-                        <a href="tattoo.html">Tattoo</a>
-                    </li>
-
-                    <li>
-                        <a href="gallery.html">Gallery</a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="massage.html">Massage</a></li>
+                    <li><a href="tattoo.html">Tattoo</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
 
-                <a href="booking.html" class="nav-book-btn">
+                <a href="booking.html" class="nav-booking-btn">
                     Book Appointment
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </nav>
 
-
-            <!-- Mobile Menu Button -->
-
+            <!-- MOBILE MENU BUTTON -->
             <button
                 class="menu-toggle"
                 id="menu-toggle"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="navbar">
 
                 <i class="fa-solid fa-bars"></i>
-
             </button>
 
         </div>
-
     </header>
 
 
-    <!-- ================================
-         HERO SECTION
-    ================================= -->
+    <!-- HERO SECTION -->
+    <!-- <section class="hero" id="home"> -->
 
-    <section class="hero" id="home">
+        <!-- <div class="hero-overlay"></div> -->
+         <section class="hero" id="home">
 
-        <div class="hero-overlay"></div>
+    <!-- Background Video -->
+    <video class="hero-video"
+           autoplay
+           muted
+           loop
+           playsinline
+           poster="images/hero/hero-spa.jpg">
+
+        <source src="videos/spa-background.mp4" type="video/mp4">
+
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
 
         <div class="container hero-container">
 
             <div class="hero-content">
 
                 <span class="section-subtitle hero-subtitle">
-
                     <i class="fa-solid fa-star"></i>
-
                     EXPERIENCE THE ART OF RELAXATION
-
                 </span>
 
-                <h1>
-
+                <h1 class="hero-title">
                     Discover Your
                     <span>Beauty, Peace</span>
                     & Inner Luxury.
-
                 </h1>
 
-                <p>
-
+                <p class="hero-description">
                     Escape the everyday and experience exceptional
                     massage treatments, luxurious spa care and
                     beautiful tattoo artistry at Selena.
-
                 </p>
 
                 <div class="hero-buttons">
 
                     <a href="booking.html" class="primary-btn">
-
                         Book Your Experience
-
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
 
                     <a href="massage.html" class="secondary-btn">
-
                         Explore Services
-
                     </a>
 
                 </div>
-
 
                 <div class="hero-features">
 
                     <div>
-
                         <i class="fa-solid fa-spa"></i>
-
                         <span>Luxury Spa Care</span>
-
                     </div>
 
                     <div>
-
                         <i class="fa-solid fa-palette"></i>
-
                         <span>Creative Tattoo Art</span>
-
                     </div>
 
                     <div>
-
                         <i class="fa-solid fa-heart"></i>
-
                         <span>Personalized Service</span>
-
                     </div>
 
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
 
-    <!-- ================================
-         WELCOME SECTION
-    ================================= -->
-
+    <!-- WELCOME SECTION -->
     <section class="welcome-section section-padding">
 
-        <div class="container welcome-grid">
+        <div class="container welcome-content">
 
             <div class="welcome-image">
-
                 <img
-                    src="image/spa-interior.jpg"
+                    src="image/welcome-spa.png"
                     alt="Beautiful luxury massage spa interior"
                     loading="lazy">
 
-                <div class="experience-card">
-
-                    <i class="fa-solid fa-gem"></i>
-
-                    <h3>Selena</h3>
-
-                    <p>Your Beauty, Our Passion</p>
-
-                </div>
-
             </div>
 
-
-            <div class="welcome-content">
+            <div class="welcome-text">
 
                 <span class="section-subtitle">
-
                     WELCOME TO SELENA
-
                 </span>
 
                 <h2 class="section-title">
-
                     A Place Where
                     <span>Luxury Meets Care</span>
-
                 </h2>
 
                 <p>
-
                     At Selena Massage Spa with Tattoo, we believe
                     relaxation and personal expression should be
                     an unforgettable experience.
-
                 </p>
 
                 <p>
-
                     From soothing massage treatments to beautiful
                     tattoo designs, our goal is to provide a welcoming,
                     comfortable and professional environment for every
                     customer.
-
                 </p>
 
                 <div class="welcome-points">
 
                     <div>
-
-                        <i class="fa-solid fa-check-circle"></i>
-
+                        <i class="fa-solid fa-circle-check"></i>
                         Professional Service
-
                     </div>
 
                     <div>
-
-                        <i class="fa-solid fa-check-circle"></i>
-
+                        <i class="fa-solid fa-circle-check"></i>
                         Comfortable Environment
-
                     </div>
 
                     <div>
-
-                        <i class="fa-solid fa-check-circle"></i>
-
+                        <i class="fa-solid fa-circle-check"></i>
                         Personalized Experiences
-
                     </div>
 
                 </div>
 
                 <a href="about.html" class="primary-btn">
-
                     Discover Our Story
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
             </div>
-
         </div>
-
     </section>
 
 
-    <!-- ================================
-         MASSAGE SERVICES
-    ================================= -->
-
-    <section class="services-section section-padding" id="massage">
+    <!-- MASSAGE SERVICES -->
+    <section class="massage-section section-padding" id="massage">
 
         <div class="container">
 
             <div class="section-heading">
 
                 <span class="section-subtitle">
-
                     RELAX, REFRESH & RECHARGE
-
                 </span>
 
                 <h2 class="section-title">
-
                     Our Massage
                     <span>Experiences</span>
-
                 </h2>
 
                 <p>
-
                     Enjoy relaxing treatments designed to help you
                     unwind and feel refreshed.
-
                 </p>
 
             </div>
 
-
             <div class="services-grid">
 
-
-                <!-- Service 1 -->
-
+                <!-- SERVICE 1 -->
                 <div class="service-card">
 
                     <div class="service-image">
-
                         <img
-                            src="image/deep-tissue.jpg"
+                            src="image/swedish-massage.jpg"
                             alt="Swedish massage treatment"
                             loading="lazy">
-
-                        <span class="service-number">01</span>
-
                     </div>
 
-                    <div class="service-content">
+                    <div class="service-info">
 
                         <h3>Swedish Massage</h3>
 
                         <p>
-
                             A relaxing massage experience using
                             gentle techniques to help ease everyday
                             tension.
-
                         </p>
 
-                        <a href="booking.html?service=swedish-massage">
-
+                        <a href="booking.html?service=swedish-massage" class="service-link">
                             Book This Service
-
                             <i class="fa-solid fa-arrow-right"></i>
-
                         </a>
 
                     </div>
-
                 </div>
 
 
-                <!-- Service 2 -->
-
+                <!-- SERVICE 2 -->
                 <div class="service-card">
 
                     <div class="service-image">
-
                         <img
-                            src="image/swedish-massage.jpg"
+                            src="image/deep-tissue.jpg"
                             alt="Deep tissue massage treatment"
                             loading="lazy">
-
-                        <span class="service-number">02</span>
-
                     </div>
 
-                    <div class="service-content">
+                    <div class="service-info">
 
                         <h3>Deep Tissue Massage</h3>
 
                         <p>
-
                             A focused massage treatment using
                             deeper pressure to target areas of
                             muscular tension.
-
                         </p>
 
-                        <a href="booking.html?service=deep-tissue">
-
+                        <a href="booking.html?service=deep-tissue" class="service-link">
                             Book This Service
-
                             <i class="fa-solid fa-arrow-right"></i>
-
                         </a>
 
                     </div>
-
                 </div>
 
 
-                <!-- Service 3 -->
-
+                <!-- SERVICE 3 -->
                 <div class="service-card">
 
                     <div class="service-image">
-
                         <img
-                            src="image/hot-stone.jpg"
+                            src="image/stone-massage.png"
                             alt="Hot stone massage"
                             loading="lazy">
-
-                        <span class="service-number">03</span>
-
                     </div>
 
-                    <div class="service-content">
+                    <div class="service-info">
 
                         <h3>Hot Stone Massage</h3>
 
                         <p>
-
                             Enjoy a warm and calming massage
                             experience using heated stones.
-
                         </p>
 
-                        <a href="booking.html?service=hot-stone">
-
+                        <a href="booking.html?service=hot-stone" class="service-link">
                             Book This Service
-
                             <i class="fa-solid fa-arrow-right"></i>
-
                         </a>
 
                     </div>
-
                 </div>
 
 
-                <!-- Service 4 -->
-
+                <!-- SERVICE 4 -->
                 <div class="service-card">
 
                     <div class="service-image">
-
                         <img
-                            src="image/aromatherapy.jpg"
-                            alt="Aromatherapy massage"
+                            src="image/nuru-massage.png"
+                            alt="nuru massage"
                             loading="lazy">
-
-                        <span class="service-number">04</span>
-
                     </div>
 
-                    <div class="service-content">
+                    <div class="service-info">
 
-                        <h3>Aromatherapy Massage</h3>
+                        <h3>Nuru Massage</h3>
 
                         <p>
-
                             A soothing experience combining
-                            massage techniques with aromatic
-                            oils.
-
+                            massage techniques with aromatic oils.
                         </p>
 
-                        <a href="booking.html?service=aromatherapy">
-
+                        <a href="booking.html?service=aromatherapy" class="service-link">
                             Book This Service
-
                             <i class="fa-solid fa-arrow-right"></i>
-
                         </a>
 
                     </div>
-
                 </div>
 
             </div>
 
-
             <div class="section-button">
-
                 <a href="massage.html" class="outline-btn">
-
                     View All Massage Services
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         TATTOO SECTION
-    ================================= -->
-
+    <!-- TATTOO SECTION -->
     <section class="tattoo-section section-padding" id="tattoo">
 
-        <div class="container tattoo-grid">
+        <div class="container tattoo-content">
 
-            <div class="tattoo-content">
+            <div class="tattoo-text">
 
                 <span class="section-subtitle">
-
                     ART THAT TELLS YOUR STORY
-
                 </span>
 
                 <h2 class="section-title">
-
                     Express Yourself
                     Through <span>Beautiful Art</span>
-
                 </h2>
 
                 <p>
-
                     Your body is your canvas. Explore creative
                     tattoo designs and personalized artwork
                     that reflect your personality and style.
-
                 </p>
 
                 <div class="tattoo-features">
 
                     <div>
-
                         <i class="fa-solid fa-pen-nib"></i>
-
                         <div>
-
                             <h4>Custom Tattoo Designs</h4>
-
                             <p>Personalized artwork created around your ideas.</p>
-
                         </div>
-
                     </div>
 
-
                     <div>
-
                         <i class="fa-solid fa-palette"></i>
-
                         <div>
-
                             <h4>Creative Tattoo Art</h4>
-
                             <p>Explore different artistic styles and designs.</p>
-
                         </div>
-
                     </div>
 
-
                     <div>
-
                         <i class="fa-solid fa-shield-heart"></i>
-
                         <div>
-
                             <h4>Hygiene & Safety</h4>
-
                             <p>Professional hygiene and safe tattoo practices.</p>
-
                         </div>
-
                     </div>
 
                 </div>
 
                 <a href="tattoo.html" class="primary-btn">
-
                     Explore Tattoo Designs
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
             </div>
 
-
             <div class="tattoo-image">
 
                 <img
-                    src="image/tattoo-artist.jpg"
+                    src="image/tatto-artist.png"
                     alt="Professional tattoo artist creating artwork"
                     loading="lazy">
-
-                <div class="tattoo-image-label">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <span>ARTISTIC EXPRESSION</span>
-
-                </div>
 
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         FEATURED TATTOO GALLERY
-    ================================= -->
-
-    <section class="gallery-section section-padding">
+    <!-- TATTOO GALLERY -->
+    <section class="tattoo-gallery section-padding">
 
         <div class="container">
 
             <div class="section-heading">
 
                 <span class="section-subtitle">
-
                     OUR CREATIVE COLLECTION
-
                 </span>
 
                 <h2 class="section-title">
-
                     Tattoo <span>Gallery</span>
-
                 </h2>
 
                 <p>
-
                     Explore tattoo inspiration and artistic
                     styles from our collection.
-
                 </p>
 
             </div>
 
-
             <div class="gallery-grid">
 
                 <a href="gallery.html" class="gallery-item">
-
                     <img
                         src="image/tattoo-1.png"
                         alt="Floral tattoo inspiration"
                         loading="lazy">
-
-                    <div class="gallery-overlay">
-
-                        <span>Floral Art</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </div>
-
                 </a>
 
-
                 <a href="gallery.html" class="gallery-item">
-
                     <img
-                        src="image/tattoo-1.png"
+                        src="image/tattoo-2.png"
                         alt="Fine line tattoo inspiration"
                         loading="lazy">
-
-                    <div class="gallery-overlay">
-
-                        <span>Fine Line Art</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </div>
-
                 </a>
 
-
                 <a href="gallery.html" class="gallery-item">
-
                     <img
-                        src="image/tattoo-1.png"
+                        src="image/tattoo-3.png"
                         alt="Creative tattoo design"
                         loading="lazy">
-
-                    <div class="gallery-overlay">
-
-                        <span>Creative Designs</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </div>
-
                 </a>
 
-
                 <a href="gallery.html" class="gallery-item">
-
                     <img
-                        src="image/tattoo-1.png"
+                        src="image/tattoo-4.png"
                         alt="Artistic tattoo design"
                         loading="lazy">
-
-                    <div class="gallery-overlay">
-
-                        <span>Artistic Style</span>
-
-                        <i class="fa-solid fa-plus"></i>
-
-                    </div>
-
                 </a>
 
             </div>
 
-
             <div class="section-button">
-
                 <a href="gallery.html" class="outline-btn">
-
                     View Full Gallery
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         WHY CHOOSE US
-    ================================= -->
-
+    <!-- WHY CHOOSE SELENA -->
     <section class="why-section section-padding">
 
         <div class="container">
@@ -822,241 +542,156 @@
             <div class="section-heading">
 
                 <span class="section-subtitle">
-
                     THE SELENA EXPERIENCE
-
                 </span>
 
                 <h2 class="section-title">
-
                     Why Choose <span>Selena?</span>
-
                 </h2>
 
                 <p>
-
                     We are committed to making every visit
                     comfortable, special and memorable.
-
                 </p>
 
             </div>
-
 
             <div class="why-grid">
 
                 <div class="why-card">
-
-                    <i class="fa-solid fa-spa"></i>
-
+                    <div class="why-icon">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
                     <h3>Relaxing Atmosphere</h3>
-
                     <p>
-
                         A welcoming environment designed
                         with comfort and relaxation in mind.
-
                     </p>
-
                 </div>
 
-
                 <div class="why-card">
-
-                    <i class="fa-solid fa-user-check"></i>
-
+                    <div class="why-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
                     <h3>Professional Care</h3>
-
                     <p>
-
                         Attentive service and personalized
                         attention for every appointment.
-
                     </p>
-
                 </div>
 
-
                 <div class="why-card">
-
-                    <i class="fa-solid fa-heart"></i>
-
+                    <div class="why-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
                     <h3>Customer Focused</h3>
-
                     <p>
-
                         Your comfort, preferences and
                         satisfaction matter to us.
-
                     </p>
-
                 </div>
 
-
                 <div class="why-card">
-
-                    <i class="fa-solid fa-gem"></i>
-
+                    <div class="why-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
                     <h3>Premium Experience</h3>
-
                     <p>
-
                         Enjoy carefully selected treatments
                         and creative services.
-
                     </p>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
 
-    <!-- ================================
-         BOOKING CALL TO ACTION
-    ================================= -->
-
+    <!-- BOOKING CALL TO ACTION -->
     <section class="booking-cta">
 
-        <div class="booking-cta-overlay"></div>
-
-        <div class="container booking-cta-content">
+        <div class="container">
 
             <span class="section-subtitle">
-
                 YOUR EXPERIENCE STARTS HERE
-
             </span>
 
             <h2>
-
                 Take Time For Yourself.
                 You Deserve It.
-
             </h2>
 
             <p>
-
                 Whether you need a relaxing massage or
                 a beautiful new tattoo, Selena is ready
                 to welcome you.
-
             </p>
 
             <a href="booking.html" class="primary-btn">
-
                 Schedule Your Appointment
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         PAYMENT INFORMATION
-    ================================= -->
-
+    <!-- PAYMENT INFORMATION -->
     <section class="payment-section section-padding">
 
-        <div class="container payment-container">
+        <div class="container">
 
-            <div class="payment-content">
+            <div class="section-heading">
 
                 <span class="section-subtitle">
-
                     SIMPLE & SECURE CHECKOUT
-
                 </span>
 
                 <h2 class="section-title">
-
                     Convenient <span>Payment Options</span>
-
                 </h2>
 
                 <p>
-
                     Choose an available payment method when
                     completing your appointment booking.
-
                 </p>
 
             </div>
 
-
-            <div class="payment-methods">
+            <div class="payment-grid">
 
                 <div class="payment-card">
-
                     <i class="fa-brands fa-bitcoin"></i>
-
-                    <div>
-
-                        <h4>Bitcoin</h4>
-
-                        <span>BTC payments</span>
-
-                    </div>
-
+                    <h3>Bitcoin</h3>
+                    <p>Bitcoin payments (BTC), subject to payment verification.</p>
                 </div>
 
-
                 <div class="payment-card">
-
                     <i class="fa-solid fa-coins"></i>
-
-                    <div>
-
-                        <h4>USDT</h4>
-
-                        <span>Supported network to be confirmed</span>
-
-                    </div>
-
+                    <h3>USDT</h3>
+                    <p>USDT payments. The supported network will be confirmed at checkout.</p>
                 </div>
 
-
                 <div class="payment-card">
-
                     <i class="fa-solid fa-credit-card"></i>
-
-                    <div>
-
-                        <h4>Card Payments</h4>
-
-                        <span>Through an approved payment processor</span>
-
-                    </div>
-
+                    <h3>Card Payments</h3>
+                    <p>Card payments through an approved payment processor.</p>
                 </div>
 
             </div>
 
             <p class="payment-note">
-
                 Payment options are subject to availability and
                 payment verification. Never send cryptocurrency
-                to an address until the booking checkout displays
-                the confirmed payment instructions.
-
+                until the booking checkout displays confirmed
+                payment instructions.
             </p>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         CONTACT SECTION
-    ================================= -->
-
+    <!-- CONTACT SECTION -->
     <section class="contact-section section-padding">
 
         <div class="container">
@@ -1064,269 +699,191 @@
             <div class="section-heading">
 
                 <span class="section-subtitle">
-
                     WE WOULD LOVE TO HEAR FROM YOU
-
                 </span>
 
                 <h2 class="section-title">
-
                     Get In <span>Touch</span>
-
                 </h2>
 
                 <p>
-
                     Have questions about our massage or tattoo
                     services? Contact our team.
-
                 </p>
 
             </div>
 
-
             <div class="contact-grid">
 
-                <div class="contact-card">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <h3>Our Location</h3>
-
-                    <p>Our business address will appear here.</p>
-
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>Our business address will appear here.</p>
+                    </div>
                 </div>
 
-
-                <div class="contact-card">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    <h3>Phone Number</h3>
-
-                    <p>Contact number coming soon.</p>
-
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3>Phone Number</h3>
+                        <p>Contact number coming soon.</p>
+                    </div>
                 </div>
 
-
-                <div class="contact-card">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <h3>Email Address</h3>
-
-                    <p>Business email coming soon.</p>
-
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email Address</h3>
+                        <p>
+                            <a href="mailto:Selenashepard92@gmail.com">
+                                Selenashepard92@gmail.com
+                            </a>
+                        </p>
+                    </div>
                 </div>
 
             </div>
 
-
-            <div class="contact-button">
-
+            <div class="section-button">
                 <a href="contact.html" class="primary-btn">
-
                     Contact Selena
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         NEWSLETTER / FINAL CTA
-    ================================= -->
-
+    <!-- FINAL BOOKING CTA -->
     <section class="newsletter-section">
 
-        <div class="container newsletter-container">
+        <div class="container">
 
-            <div>
+            <span class="section-subtitle">
+                STAY CONNECTED
+            </span>
 
-                <span class="section-subtitle">
+            <h2>
+                Discover Your Next
+                Selena Experience.
+            </h2>
 
-                    STAY CONNECTED
+            <p>
+                Make time for relaxation, beauty and creativity.
+            </p>
 
-                </span>
-
-                <h2>
-
-                    Discover Your Next
-                    Selena Experience.
-
-                </h2>
-
-            </div>
-
-            <a href="booking.html" class="secondary-btn">
-
+            <a href="booking.html" class="primary-btn">
                 Book An Appointment
-
                 <i class="fa-solid fa-arrow-right"></i>
-
             </a>
 
         </div>
-
     </section>
 
 
-    <!-- ================================
-         FOOTER
-    ================================= -->
-
+    <!-- FOOTER -->
     <footer class="footer">
 
         <div class="container footer-grid">
 
+            <!-- FOOTER BRAND -->
+            <div class="footer-about">
 
-            <!-- Footer Brand -->
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="logo footer-logo">
-
-                    <span class="logo-icon">
-
-                        <i class="fa-solid fa-spa"></i>
-
-                    </span>
-
-                    <span class="logo-text">
-
-                        <strong>SELENA</strong>
-
-                        <small>MASSAGE SPA & TATTOO</small>
-
-                    </span>
-
+                <a href="index.html" class="footer-logo">
+                    SELENA
                 </a>
 
                 <p>
-
                     A destination for relaxation, beauty,
                     wellness and artistic expression.
-
                 </p>
 
-
-                <div class="social-links">
+                <div class="footer-socials">
 
                     <a href="#" aria-label="Facebook">
-
                         <i class="fa-brands fa-facebook-f"></i>
-
                     </a>
 
                     <a href="#" aria-label="Instagram">
-
                         <i class="fa-brands fa-instagram"></i>
-
                     </a>
 
                     <a href="#" aria-label="TikTok">
-
                         <i class="fa-brands fa-tiktok"></i>
-
                     </a>
 
                     <a href="#" aria-label="Pinterest">
-
                         <i class="fa-brands fa-pinterest-p"></i>
-
                     </a>
 
                 </div>
-
             </div>
 
 
-            <!-- Quick Links -->
-
-            <div class="footer-links">
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
 
                 <h3>Quick Links</h3>
 
                 <ul>
-
                     <li><a href="index.html">Home</a></li>
-
                     <li><a href="about.html">About Us</a></li>
-
                     <li><a href="massage.html">Massage</a></li>
-
                     <li><a href="tattoo.html">Tattoo</a></li>
-
                     <li><a href="gallery.html">Gallery</a></li>
-
                 </ul>
 
             </div>
 
 
-            <!-- Services -->
-
-            <div class="footer-links">
+            <!-- SERVICES -->
+            <div class="footer-column">
 
                 <h3>Our Services</h3>
 
                 <ul>
-
                     <li><a href="massage.html">Swedish Massage</a></li>
-
                     <li><a href="massage.html">Deep Tissue Massage</a></li>
-
                     <li><a href="massage.html">Hot Stone Massage</a></li>
-
                     <li><a href="massage.html">Aromatherapy</a></li>
-
                     <li><a href="tattoo.html">Tattoo Art</a></li>
-
                 </ul>
 
             </div>
 
 
-            <!-- Footer Contact -->
-
-            <div class="footer-contact">
+            <!-- CONTACT INFORMATION -->
+            <div class="footer-column">
 
                 <h3>Contact Information</h3>
 
-                <p>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Business address coming soon.
+                    </li>
 
-                    <i class="fa-solid fa-location-dot"></i>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        Phone number coming soon.
+                    </li>
 
-                    Business address coming soon.
-
-                </p>
-
-                <p>
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    Phone number coming soon.
-
-                </p>
-
-                <p>
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    Business email coming soon.
-
-                </p>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        Selenashepard92@gmail.com
+                    </li>
+                </ul>
 
                 <a href="booking.html" class="footer-book-btn">
-
                     Book Appointment
-
                 </a>
 
             </div>
@@ -1334,26 +891,20 @@
         </div>
 
 
-        <!-- Footer Bottom -->
-
+        <!-- FOOTER BOTTOM -->
         <div class="footer-bottom">
 
-            <div class="container footer-bottom-content">
+            <div class="container">
 
                 <p>
-
                     &copy; <span id="current-year">2026</span>
                     Selena Massage Spa with Tattoo.
                     All Rights Reserved.
-
                 </p>
 
                 <div>
-
                     <a href="privacy.html">Privacy Policy</a>
-
                     <a href="terms.html">Terms & Conditions</a>
-
                 </div>
 
             </div>
@@ -1362,9 +913,5 @@
 
     </footer>
 
-
-<script src="js/app.js"></script>
 </body>
-
 </html>
-
