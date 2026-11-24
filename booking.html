@@ -235,7 +235,7 @@
                 </div>
 
 
-                <form id="booking-form">
+                <form id="booking-form" enctype="multipart/form-data">
 
                     <!-- SPAM PROTECTION -->
                     <input type="text"
@@ -483,17 +483,67 @@
                     </div>
 
 
-                    <div class="payment-instructions" id="payment-instructions">
+                <div class="payment-instructions" id="payment-instructions">
+                <i class="fas fa-lock"></i>
+                <p>Select a payment method to see the payment instructions.</p>
 
-                        <i class="fas fa-lock"></i>
+               <div id="btc-payment-details" hidden>
+               <p><strong>Bitcoin receiving address:</strong></p>
+               <div class="wallet-address" id="btc-wallet-address">
+               bc1qqk50lap6aygnkkwxqvnyjdw7k2n0h0rjex9l0n
+               </div>
 
-                        <p>
-                            Select a payment method to see the next steps.
-                            Never send payment until you receive verified
-                            payment instructions from Selena.
-                        </p>
+              <button type="button" id="copy-btc-address" class="copy-wallet-btn">
+              <i class="fas fa-copy"></i> Copy BTC Address
+              </button>
+              </div>
 
-                    </div>
+              <div id="usdt-payment-details" hidden>
+              <p>
+              USDT payment instructions are not configured yet.
+              Please wait for a verified wallet address and network.
+              </p>
+             </div>
+
+             <div id="card-payment-details" hidden>
+             <p>
+             Secure card checkout is not configured yet.
+             Please contact Selena for payment instructions.
+             Never enter your card number or CVV in this booking form.
+             </p>
+             </div>
+            </div>
+
+
+            <div class="form-group payment-proof-group">
+
+    <label for="payment-proof">
+        Payment Screenshot (Optional)
+    </label>
+
+    <input
+        type="file"
+        id="payment-proof"
+        name="payment_proof"
+        accept="image/png,image/jpeg,image/webp"
+    >
+
+    <small>
+        Upload a screenshot of your transaction confirmation.
+        PNG, JPG or WEBP images only. Maximum size: 5 MB.
+        Never upload private keys, recovery phrases, card numbers or CVV.
+    </small>
+
+    <div id="payment-proof-preview" hidden>
+        <img
+            id="payment-proof-image"
+            src=""
+            alt="Payment screenshot preview"
+        >
+        <p id="payment-proof-name"></p>
+    </div>
+
+</div>
 
 
                     <div class="form-group">
