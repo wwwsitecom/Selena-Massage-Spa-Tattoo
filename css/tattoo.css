@@ -1,0 +1,889 @@
+
+/* =========================================
+   SELENA MASSAGE SPA
+   TATTOO PAGE - PART 1
+========================================= */
+
+
+/* =========================================
+   1. GENERAL TATTOO PAGE SETTINGS
+========================================= */
+
+.tattoo-page {
+    overflow-x: hidden;
+}
+
+.tattoo-page section {
+    position: relative;
+}
+
+.tattoo-page .section-padding {
+    padding: 100px 7%;
+}
+
+.tattoo-page .section-subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.tattoo-page .section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.tattoo-page .section-heading h2 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.tattoo-page .section-heading h2 span {
+    color: var(--primary-color);
+}
+
+.tattoo-page .section-heading p {
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   2. TATTOO HERO SECTION
+========================================= */
+
+.tattoo-hero {
+    min-height: 650px;
+    height: 85vh;
+    max-height: 850px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(30, 24, 19, 0.55),
+            rgba(30, 24, 19, 0.65)
+        ),
+        url("../images/tattoo/tattoo-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+}
+
+.tattoo-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25, 20, 15, 0.35),
+            rgba(25, 20, 15, 0.70)
+        );
+
+    z-index: 1;
+}
+
+.tattoo-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.tattoo-hero-content .tattoo-subtitle {
+    display: inline-block;
+
+    color: var(--gold-light);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+}
+
+.tattoo-hero-content h1 {
+    color: var(--white-color);
+
+    font-family: var(--heading-font);
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    font-weight: 600;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.tattoo-hero-content h1 span {
+    color: var(--primary-light);
+}
+
+.tattoo-hero-content p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.tattoo-hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* HERO BUTTONS */
+
+.tattoo-page .btn-primary,
+.tattoo-page .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 30px;
+
+    border-radius: var(--radius-full);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+.tattoo-page .btn-primary {
+    background: var(--primary-color);
+    color: var(--white-color);
+
+    border: 1px solid var(--primary-color);
+}
+
+.tattoo-page .btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+
+    transform: translateY(-3px);
+}
+
+.tattoo-page .btn-secondary {
+    background: transparent;
+    color: var(--white-color);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.tattoo-page .btn-secondary:hover {
+    background: var(--white-color);
+    color: var(--dark-color);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   3. TATTOO INTRODUCTION
+========================================= */
+
+.tattoo-intro {
+    background: var(--cream-light);
+}
+
+.tattoo-intro-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+.tattoo-intro-image {
+    position: relative;
+
+    width: 100%;
+    height: 520px;
+}
+
+.tattoo-intro-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80%;
+    height: 85%;
+
+    right: -18px;
+    bottom: -18px;
+
+    border: 2px solid var(--primary-light);
+
+    border-radius: var(--radius-md);
+
+    z-index: 0;
+}
+
+.tattoo-intro-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-md);
+}
+
+.tattoo-intro-text {
+    padding: 15px 0;
+}
+
+.tattoo-intro-text h2 {
+    color: var(--heading-color);
+
+    font-family: var(--heading-font);
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+}
+
+.tattoo-intro-text h2 span {
+    color: var(--primary-color);
+}
+
+.tattoo-intro-text p {
+    color: var(--text-color);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 17px;
+}
+
+.tattoo-intro-text .btn-primary {
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   4. TATTOO STYLES SECTION
+========================================= */
+
+.tattoo-styles-section {
+    background: var(--cream-color);
+}
+
+.tattoo-styles-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+
+/* TATTOO STYLE CARD */
+
+.tattoo-style-card {
+    background: var(--white-color);
+
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.tattoo-style-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* CARD IMAGE */
+
+.tattoo-style-image {
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+
+    background: var(--beige-color);
+}
+
+.tattoo-style-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.tattoo-style-card:hover .tattoo-style-image img {
+    transform: scale(1.08);
+}
+
+
+/* CARD CONTENT */
+
+.tattoo-style-info {
+    padding: 25px 24px 28px;
+}
+
+.tattoo-style-info h3 {
+    color: var(--heading-color);
+
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.tattoo-style-info p {
+    color: var(--text-color);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.tattoo-style-info a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--primary-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+.tattoo-style-info a:hover {
+    color: var(--primary-color);
+
+    gap: 14px;
+}
+
+.tattoo-style-info a i {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   5. TATTOO BOOKING BANNER
+========================================= */
+
+.tattoo-booking-banner {
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 7%;
+
+    background:
+        linear-gradient(
+            rgba(37, 29, 21, 0.78),
+            rgba(37, 29, 21, 0.82)
+        ),
+        url("../images/tattoo/tattoo-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+}
+
+.tattoo-booking-content {
+    max-width: 750px;
+}
+
+.tattoo-booking-content .section-subtitle {
+    color: var(--gold-light);
+}
+
+.tattoo-booking-content h2 {
+    color: var(--white-color);
+
+    font-family: var(--heading-font);
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+.tattoo-booking-content h2 span {
+    color: var(--primary-light);
+}
+
+.tattoo-booking-content p {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   END OF TATTOO CSS PART 1
+========================================= */
+
+
+
+/* =========================================
+   SELENA MASSAGE SPA
+   TATTOO PAGE - PART 2
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* =========================================
+   1. LARGE TABLETS AND SMALL LAPTOPS
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .tattoo-page .section-padding {
+        padding: 85px 5%;
+    }
+
+    .tattoo-intro-container {
+        gap: 45px;
+    }
+
+    .tattoo-intro-image {
+        height: 450px;
+    }
+
+    .tattoo-intro-text h2 {
+        font-size: 36px;
+    }
+
+    .tattoo-styles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .tattoo-style-image {
+        height: 300px;
+    }
+
+}
+
+
+/* =========================================
+   2. TABLET RESPONSIVENESS
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .tattoo-page .section-padding {
+        padding: 70px 6%;
+    }
+
+    /* HERO */
+
+    .tattoo-hero {
+        min-height: 580px;
+        height: auto;
+        max-height: none;
+
+        padding: 100px 0;
+    }
+
+    .tattoo-hero-content {
+        width: 88%;
+    }
+
+    .tattoo-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .tattoo-hero-content p {
+        font-size: 15px;
+    }
+
+    .tattoo-hero-content .tattoo-subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+
+    /* INTRODUCTION */
+
+    .tattoo-intro-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .tattoo-intro-image {
+        height: 430px;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .tattoo-intro-text {
+        text-align: center;
+    }
+
+    .tattoo-intro-text h2 {
+        font-size: 36px;
+    }
+
+
+    /* SECTION HEADING */
+
+    .tattoo-page .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .tattoo-page .section-heading h2 {
+        font-size: 35px;
+    }
+
+
+    /* TATTOO CARDS */
+
+    .tattoo-styles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tattoo-style-image {
+        height: 240px;
+    }
+
+    .tattoo-style-info {
+        padding: 22px 18px;
+    }
+
+    .tattoo-style-info h3 {
+        font-size: 20px;
+    }
+
+    .tattoo-style-info p {
+        font-size: 13px;
+    }
+
+
+    /* BOOKING BANNER */
+
+    .tattoo-booking-banner {
+        min-height: 380px;
+        padding: 75px 6%;
+    }
+
+    .tattoo-booking-content h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================
+   3. MOBILE PHONES
+========================================= */
+
+@media screen and (max-width: 576px) {
+
+    .tattoo-page .section-padding {
+        padding: 60px 5%;
+    }
+
+
+    /* HERO */
+
+    .tattoo-hero {
+        min-height: 540px;
+        padding: 85px 0;
+    }
+
+    .tattoo-hero-content {
+        width: 92%;
+    }
+
+    .tattoo-hero-content h1 {
+        font-size: 37px;
+        line-height: 1.25;
+    }
+
+    .tattoo-hero-content p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 28px;
+    }
+
+    .tattoo-hero-content .tattoo-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .tattoo-hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .tattoo-hero-buttons a {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .tattoo-page .btn-primary,
+    .tattoo-page .btn-secondary {
+        padding: 14px 23px;
+        font-size: 12px;
+    }
+
+
+    /* INTRODUCTION */
+
+    .tattoo-intro-container {
+        gap: 35px;
+    }
+
+    .tattoo-intro-image {
+        height: 320px;
+    }
+
+    .tattoo-intro-image::before {
+        right: -9px;
+        bottom: -9px;
+    }
+
+    .tattoo-intro-text h2 {
+        font-size: 30px;
+    }
+
+    .tattoo-intro-text p {
+        font-size: 14px;
+    }
+
+
+    /* SECTION HEADING */
+
+    .tattoo-page .section-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .tattoo-page .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .tattoo-page .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .tattoo-page .section-heading p {
+        font-size: 13px;
+    }
+
+
+    /* TATTOO CARDS */
+
+    .tattoo-styles-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .tattoo-style-card {
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tattoo-style-image {
+        height: 280px;
+    }
+
+    .tattoo-style-info {
+        padding: 22px;
+    }
+
+    .tattoo-style-info h3 {
+        font-size: 22px;
+    }
+
+    .tattoo-style-info p {
+        font-size: 14px;
+    }
+
+
+    /* BOOKING BANNER */
+
+    .tattoo-booking-banner {
+        min-height: 380px;
+        padding: 65px 5%;
+    }
+
+    .tattoo-booking-content h2 {
+        font-size: 30px;
+    }
+
+    .tattoo-booking-content p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =========================================
+   4. VERY SMALL MOBILE SCREENS
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .tattoo-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .tattoo-intro-image {
+        height: 270px;
+    }
+
+    .tattoo-intro-text h2 {
+        font-size: 26px;
+    }
+
+    .tattoo-page .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .tattoo-style-image {
+        height: 240px;
+    }
+
+    .tattoo-booking-content h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================================
+   5. REVEAL ANIMATION
+========================================= */
+
+.tattoo-page .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.tattoo-page .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   6. ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tattoo-page *,
+    .tattoo-page *::before,
+    .tattoo-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .tattoo-page .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+
+/* =========================================
+   END OF TATTOO CSS PART 2
+========================================= */
+
