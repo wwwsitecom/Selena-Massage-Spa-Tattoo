@@ -2,59 +2,63 @@
 /* =========================================
    SELENA MASSAGE SPA WITH TATTOO
    BOOKING.JS
-   FORMSPREE INTEGRATION
+   FORMSPREE + PAYMENT PROOF UPLOAD
 ========================================= */
-
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const FORM_ENDPOINT = "https://formspree.io/f/mwlowkyz";
 
+    const BTC_ADDRESS =
+        "bc1qqk50lap6aygnkkwxqvnyjdw7k2n0h0rjex9l0n";
+
+    const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+
     const bookingForm = document.getElementById("booking-form");
-
     const bookingMessage = document.getElementById("booking-message");
-
     const submitButton = document.getElementById("booking-submit");
 
     const serviceCategory = document.getElementById("service-category");
-
     const serviceType = document.getElementById("service-type");
-
     const appointmentDate = document.getElementById("appointment-date");
 
     const paymentMethod = document.getElementById("payment-method");
-
     const paymentInstructions = document.getElementById("payment-instructions");
 
+    const btcDetails = document.getElementById("btc-payment-details");
+    const usdtDetails = document.getElementById("usdt-payment-details");
+    const cardDetails = document.getElementById("card-payment-details");
+
+    const copyBTCButton = document.getElementById("copy-btc-address");
+
+    const paymentProof = document.getElementById("payment-proof");
+    const proofPreview = document.getElementById("payment-proof-preview");
+    const proofImage = document.getElementById("payment-proof-image");
+    const proofName = document.getElementById("payment-proof-name");
 
     if (!bookingForm) return;
 
 
-    /* =========================================
-       1. SET MINIMUM APPOINTMENT DATE
-    ========================================= */
+    /* 1. MINIMUM APPOINTMENT DATE */
 
-    if (appointmentDate) {
-
+    function getLocalDate() {
         const today = new Date();
 
-        const localToday = [
+        return [
             today.getFullYear(),
             String(today.getMonth() + 1).padStart(2, "0"),
             String(today.getDate()).padStart(2, "0")
         ].join("-");
+    }
 
-        appointmentDate.min = localToday;
-
+    if (appointmentDate) {
+        appointmentDate.min = getLocalDate();
     }
 
 
-    /* =========================================
-       2. SERVICE CATEGORY SELECTION
-    ========================================= */
+    /* 2. SERVICE CATEGORY */
 
     const services = {
-
         Massage: [
             "Swedish Massage",
             "Deep Tissue Massage",
@@ -71,9 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "Custom Tattoo Design",
             "Tattoo Consultation"
         ]
-
     };
-
 
     if (serviceCategory && serviceType) {
 
@@ -83,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             serviceType.innerHTML = "";
 
-            if (!selectedCategory || !services[selectedCategory]) {
+            if (!services[selectedCategory]) {
 
                 serviceType.disabled = true;
 
@@ -91,22 +93,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     '<option value="">Select a category first</option>';
 
                 return;
-
             }
-
 
             serviceType.disabled = false;
 
             serviceType.innerHTML =
                 '<option value="">Choose your service</option>';
 
-
             services[selectedCategory].forEach(function (service) {
 
                 const option = document.createElement("option");
 
                 option.value = service;
-
                 option.textContent = service;
 
                 serviceType.appendChild(option);
@@ -114,167 +112,242 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
         });
-
     }
 
 
+    /* 3. PAYMENT INSTRUCTIONS */
 
-    /* =========================================
-       3. PAYMENT METHOD INSTRUCTIONS
-    ========================================= */
+    function updatePaymentInstructions() {
 
-    if (paymentMethod && paymentInstructions) {
+        const method = paymentMethod ? paymentMethod.value : "";
 
-        paymentMethod.addEventListener("change", function () {
+        if (btcDetails) btcDetails.hidden = true;
+        if (usdtDetails) usdtDetails.hidden = true;
+        if (cardDetails) cardDetails.hidden = true;
 
-            const selectedMethod = paymentMethod.value;
+        if (!paymentInstructions) return;
 
-            let message = "";
+        const message = paymentInstructions.querySelector("p");
+
+        if (!method) {
+
+            message.textContent =
+                "Select a payment method to see the payment instructions.";
+
+            return;
+        }
+
+        if (method === "Bitcoin") {
+
+            message.textContent =
+                "Bitcoin selected. Check the receiving address carefully " +
+                "before sending funds. Your payment must be independently verified.";
+
+            if (btcDetails) btcDetails.hidden = false;
+
+        }
+
+        else if (method === "USDT") {
+
+            message.textContent =
+                "USDT selected. Do not send funds until Selena provides " +
+                "a verified wallet address and confirms the supported network.";
+
+            if (usdtDetails) usdtDetails.hidden = false;
+
+        }
+
+        else if (method === "Card Payment") {
+
+            message.textContent =
+                "Card payment selected. A secure hosted checkout must be " +
+                "provided by Selena. Never enter card details in this form.";
+
+            if (cardDetails) cardDetails.hidden = false;
+
+        }
+    }
+
+    if (paymentMethod) {
+        paymentMethod.addEventListener("change", updatePaymentInstructions);
+    }
 
 
-            if (selectedMethod === "Bitcoin") {
+    /* 4. COPY BITCOIN ADDRESS */
 
-                message =
-                    "Bitcoin selected. Contact Selena to receive the " +
-                    "verified BTC wallet address and payment instructions. " +
-                    "Your booking will remain pending until payment is verified.";
+    if (copyBTCButton) {
+
+        copyBTCButton.addEventListener("click", async function () {
+
+            try {
+
+                await navigator.clipboard.writeText(BTC_ADDRESS);
+
+                copyBTCButton.innerHTML =
+                    '<i class="fas fa-check"></i> Address Copied!';
+
+            } catch (error) {
+
+                window.prompt(
+                    "Copy this Bitcoin address:",
+                    BTC_ADDRESS
+                );
 
             }
-
-            else if (selectedMethod === "USDT") {
-
-                message =
-                    "USDT selected. Contact Selena to receive the verified " +
-                    "USDT wallet address and supported network. Confirm the " +
-                    "network before sending any funds.";
-
-            }
-
-            else if (selectedMethod === "Card Payment") {
-
-                message =
-                    "Card payment selected. A secure hosted checkout link " +
-                    "will be provided once the card payment processor is configured. " +
-                    "Do not enter your card number or security code in this form.";
-
-            }
-
-            else {
-
-                message =
-                    "Select a payment method to see the next steps. " +
-                    "Never send payment until you receive verified payment instructions.";
-
-            }
-
-
-            paymentInstructions.querySelector("p").textContent = message;
 
         });
-
     }
 
 
+    /* 5. PAYMENT SCREENSHOT PREVIEW */
 
-    /* =========================================
-       4. DISPLAY FORM MESSAGES
-    ========================================= */
+    if (paymentProof) {
+
+        paymentProof.addEventListener("change", function () {
+
+            const file = paymentProof.files[0];
+
+            if (!file) {
+
+                proofPreview.hidden = true;
+                proofImage.removeAttribute("src");
+
+                return;
+            }
+
+            const allowedTypes = [
+                "image/jpeg",
+                "image/png",
+                "image/webp"
+            ];
+
+            if (!allowedTypes.includes(file.type)) {
+
+                showMessage(
+                    "Please select a JPG, PNG or WEBP image.",
+                    "error"
+                );
+
+                paymentProof.value = "";
+                proofPreview.hidden = true;
+
+                return;
+            }
+
+            if (file.size > MAX_IMAGE_SIZE) {
+
+                showMessage(
+                    "Your image is too large. Please choose an image under 5 MB.",
+                    "error"
+                );
+
+                paymentProof.value = "";
+                proofPreview.hidden = true;
+
+                return;
+            }
+
+            const imageURL = URL.createObjectURL(file);
+
+            proofImage.src = imageURL;
+            proofName.textContent = file.name;
+
+            proofPreview.hidden = false;
+
+        });
+    }
+
+
+    /* 6. FORM MESSAGE */
 
     function showMessage(message, type) {
 
-        bookingMessage.textContent = message;
+        if (!bookingMessage) return;
 
+        bookingMessage.textContent = message;
         bookingMessage.className = "booking-message " + type;
 
         bookingMessage.scrollIntoView({
-
             behavior: "smooth",
-
             block: "center"
-
         });
-
     }
 
 
-
-    /* =========================================
-       5. BOOKING FORM SUBMISSION
-    ========================================= */
+    /* 7. FORM SUBMISSION */
 
     bookingForm.addEventListener("submit", async function (event) {
 
         event.preventDefault();
 
+        if (!bookingForm.reportValidity()) return;
 
-        // Browser form validation
+        if (
+            appointmentDate &&
+            appointmentDate.value &&
+            appointmentDate.value < getLocalDate()
+        ) {
 
-        if (!bookingForm.reportValidity()) {
+            showMessage(
+                "Please choose today or a future appointment date.",
+                "error"
+            );
 
             return;
-
         }
-
-
-        // Prevent accidental past appointments
-
-        if (appointmentDate && appointmentDate.value) {
-
-            const selectedDate = appointmentDate.value;
-
-            const today = new Date();
-
-            const localToday = [
-                today.getFullYear(),
-                String(today.getMonth() + 1).padStart(2, "0"),
-                String(today.getDate()).padStart(2, "0")
-            ].join("-");
-
-
-            if (selectedDate < localToday) {
-
-                showMessage(
-                    "Please choose today or a future appointment date.",
-                    "error"
-                );
-
-                return;
-
-            }
-
-        }
-
-
-        // Honeypot spam check
 
         const honeypot = bookingForm.querySelector(
             'input[name="_gotcha"]'
         );
 
-        if (honeypot && honeypot.value.trim() !== "") {
+        if (honeypot && honeypot.value.trim() !== "") return;
 
-            return;
 
+        // Validate screenshot again before submission.
+
+        if (paymentProof && paymentProof.files.length > 0) {
+
+            const file = paymentProof.files[0];
+
+            if (
+                !["image/jpeg", "image/png", "image/webp"]
+                    .includes(file.type) ||
+                file.size > MAX_IMAGE_SIZE
+            ) {
+
+                showMessage(
+                    "Please select a valid image under 5 MB.",
+                    "error"
+                );
+
+                return;
+            }
         }
 
-
-        // Disable submit button while sending
 
         submitButton.disabled = true;
 
         submitButton.innerHTML =
             '<i class="fas fa-spinner fa-spin"></i> Sending Booking...';
 
-
-        bookingMessage.className = "booking-message";
-
         bookingMessage.textContent = "";
+        bookingMessage.className = "booking-message";
 
 
         try {
 
             const formData = new FormData(bookingForm);
 
+            // Keep the payment status pending.
+            formData.set(
+                "payment_status",
+                "Pending verification"
+            );
+
+            formData.set(
+                "booking_status",
+                "Awaiting review"
+            );
 
             const response = await fetch(FORM_ENDPOINT, {
 
@@ -283,35 +356,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: formData,
 
                 headers: {
-
                     "Accept": "application/json"
-
                 }
 
             });
 
-
             const result = await response.json().catch(function () {
-
                 return {};
-
             });
 
 
-            if (response.ok) {
+            if (response.ok && !result.errors) {
 
                 showMessage(
-                    "Your booking request has been submitted successfully! " +
-                    "Selena will review your request and contact you. " +
+                    "Your booking request has been submitted successfully. " +
+                    "Selena will review your details and payment proof. " +
                     "Your appointment and payment are not confirmed yet.",
                     "success"
                 );
 
-
                 bookingForm.reset();
-
-
-                // Reset service selection
 
                 if (serviceType) {
 
@@ -319,34 +383,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     serviceType.innerHTML =
                         '<option value="">Select a category first</option>';
-
                 }
 
+                if (proofPreview) proofPreview.hidden = true;
 
-                // Restore payment instructions
+                if (proofImage) proofImage.removeAttribute("src");
 
-                if (paymentInstructions) {
+                updatePaymentInstructions();
 
-                    paymentInstructions.querySelector("p").textContent =
-                        "Select a payment method to see the next steps. " +
-                        "Never send payment until you receive verified payment instructions.";
-
+                if (appointmentDate) {
+                    appointmentDate.min = getLocalDate();
                 }
-
 
             } else {
 
-                const errorMessage = result.errors
+                const errors = result.errors
                     ? result.errors.map(function (error) {
                         return error.message;
                     }).join(" ")
-                    : "Your booking could not be submitted. Please try again.";
+                    : "";
 
+                console.error("Formspree response:", result);
 
-                showMessage(errorMessage, "error");
-
+                showMessage(
+                    errors ||
+                    "Submission failed. Check your Formspree plan, " +
+                    "file upload settings and form endpoint.",
+                    "error"
+                );
             }
-
 
         } catch (error) {
 
@@ -357,19 +422,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 "error"
             );
 
+        } finally {
+
+            submitButton.disabled = false;
+
+            submitButton.innerHTML =
+                '<span>Submit Booking Request</span> ' +
+                '<i class="fas fa-arrow-right"></i>';
         }
-
-
-        // Restore submit button
-
-        submitButton.disabled = false;
-
-        submitButton.innerHTML =
-            '<span>Submit Booking Request</span> ' +
-            '<i class="fas fa-arrow-right"></i>';
 
     });
 
+
+    // Initial payment instructions.
+    updatePaymentInstructions();
 
 });
 
